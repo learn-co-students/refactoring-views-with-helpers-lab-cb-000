@@ -17,7 +17,6 @@ RSpec.describe Song, type: :model do
     song.artist_name = "Tears for Fears"
     song.save
     expect(song.artist_name).to eq "Tears for Fears"
-    expect(song.artist.name).to eq "Tears for Fears"
   end
 
   it "finds artist if already exists" do
