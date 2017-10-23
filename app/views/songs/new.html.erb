@@ -1,5 +1,5 @@
 <h1>Create a Song</h1>
-
+<%= display_artist(@song)%>
 <%= form_for @song  do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %><br>
@@ -9,5 +9,3 @@
 
   <%= f.submit %>
 <% end %>
-
-
