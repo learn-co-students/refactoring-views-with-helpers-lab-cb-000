@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe "songs", type:  :feature do
 
   before do
@@ -11,6 +13,7 @@ describe "songs", type:  :feature do
 
     it "links to the artist" do
       visit song_path(@song)
+      save_and_open_page
       expect(page).to have_link("Daft Punk", href: artist_path(@artist))
     end
 
