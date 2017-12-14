@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(song_params)
+    @song = Song.find_or_initialize_by(song_params)
 
     if @song.save
       redirect_to @song
