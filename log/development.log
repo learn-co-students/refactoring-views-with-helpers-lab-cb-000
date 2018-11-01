@@ -375,3 +375,35 @@ Processing by ArtistsController#show as HTML
   Parameters: {"id"=>"2"}
   Rendered artists/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/new" for 146.168.96.149 at 2018-11-01 14:27:57 +0000
+Cannot render console from 146.168.96.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistsController#new as HTML
+  Rendered artists/new.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 431ms (Views: 415.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 146.168.96.149 at 2018-11-01 14:27:58 +0000
+Cannot render console from 146.168.96.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/artists" for 146.168.96.149 at 2018-11-01 14:28:04 +0000
+Cannot render console from 146.168.96.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTJ9TcLZ2OxPWf1Fj/TGgv36iyxnaF/Bt936Xlk+Rhbuz7HB6/c68Eh7UFfbQmk4pHuGePWM+vZQN97nzgyUXw==", "artist"=>{"name"=>"Adam"}, "commit"=>"Create Artist"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Adam"], ["created_at", "2018-11-01 14:28:04.396137"], ["updated_at", "2018-11-01 14:28:04.396137"]]
+  [1m[35m (36.8ms)[0m  commit transaction
+Redirected to http://192.241.157.192:59962/artists/3
+Completed 302 Found in 59ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/artists/3" for 146.168.96.149 at 2018-11-01 14:28:04 +0000
+Cannot render console from 146.168.96.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered artists/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 8.8ms | ActiveRecord: 0.3ms)
