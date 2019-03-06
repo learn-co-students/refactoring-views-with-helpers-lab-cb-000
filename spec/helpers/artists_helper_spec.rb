@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe ArtistsHelper, type: :helper do
 
   before do
+    # binding.pry
     Artist.destroy_all
     Song.destroy_all
     @artist = Artist.create!(name: "Daft Punk")
